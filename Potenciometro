@@ -1,0 +1,20 @@
+#define LED 7
+#define jurge A5
+int lectura;
+void setup() {
+  pinMode(LED, OUTPUT);
+  pinMode(jurge,INPUT);
+  Serial.begin(9600);
+  Serial.println("algo");
+}
+
+void loop() {   
+  digitalWrite(LED,HIGH);
+  delay(200);
+  digitalWrite(LED,LOW);
+  delay(200);
+  lectura =analogRead(jurge);
+  analogWrite(7,lectura);
+  Serial.print("algos");
+  Serial.println(lectura);
+}
